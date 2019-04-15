@@ -7,10 +7,10 @@ detailing the setup for that area.
 
 ## Quick install
 
-assumes `homebrew` and `git` are already installed.
+assumes `homebrew` and `git` are already installed. This is for MacOs
 
 ```bash
-https://github.com/csell5/dotfiles.git;
+git clone https://github.com/jptacek/dotfiles.git;
 brew install zsh zsh-completions antigen nodenv;
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)";
 cd ./dotfiles;
@@ -40,7 +40,12 @@ git submodule add --force https://github.com/itchyny/lightline.vim.git vim/bundl
 git submodule add --force https://github.com/nodenv/node-build.git nodenv/plugins/node-build;
 git submodule add --force https://github.com/nodenv/nodenv-package-rehash.git nodenv/plugins/nodenv-package-rehash;
 git submodule add --force https://github.com/nodenv/nodenv-update.git nodenv/plugins/nodenv-update;
+git submodule add --force https://github.com/neovim/neovim;
 ```
+
+## Original source
+
+- This originally came from [Clark Sell](https://github.com/csell5) and his [Dotfiles](https://github.com/csell5/dotfiles) repo.
 
 ## Great articles on getting setup
 
