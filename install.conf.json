@@ -20,7 +20,9 @@
       },
 
       "~/.gitignore": "git/gitignore",
-      "~/.zshrc": "zsh/zshrc",
+      "~/.bash_profile": "bash/bash_profile",
+      "~/.bashrc": "bash/bashrc",
+      "~/.aliases": "bash/aliases",
       "~/.antigenrc": "zsh/antigenrc",
 
       "~/.nodenv/plugins": "nodenv/plugins"
