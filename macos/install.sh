@@ -17,3 +17,8 @@ if [ -f set-defaults.sh ]; then
    echo "Setting defaults for MacOS"
    set-defaults.sh
 fi
+
+if [ -f brewinstall.sh ]; then
+   echo "Installing Brew cask files"
+   brewinstall.sh
+fi

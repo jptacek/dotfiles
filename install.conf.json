@@ -25,9 +25,8 @@
       "~/.aliases": "bash/aliases",
       "~/.prompt": "bash/prompt",
       "~/.git-prompt.sh": "git/git-prompt.sh",
-      "~/.git-completionbash.sh":"git/git-completionbash.sh",
+      "~/.git-completionbash.sh": "git/git-completionbash.sh",
       "~/.nodenv/plugins": "nodenv/plugins"
-
     }
   },
   {
@@ -35,7 +34,10 @@
       ["git submodule update --init --recursive", "updating submodules"],
       ["./fonts/powerline/install.sh", "installing Powerline Fonts"],
       ["nodenv update", "updating nodenv"],
-      ["nodenv package-hooks install --all", "installing nodenv package hooks"]
+      ["nodenv package-hooks install --all", "installing nodenv package hooks"],
+      ["./macos/install.sh", "installing Mac software"],
+      ["./packages/npmGlobal.sh", "installing global NPM packages"],
+      ["./packages/vsCode.sh", "installing vsCode files"]
     ]
   }
 ]
