@@ -23,8 +23,8 @@
       "~/.bash_profile": "bash/bash_profile",
       "~/.bashrc": "bash/bashrc",
       "~/.aliases": "bash/aliases",
-      "~/.antigenrc": "zsh/antigenrc",
-
+      "~/.prompt": "bash/prompt",
+      "~/.git-prompt.sh": "git/git-prompt.sh",
       "~/.nodenv/plugins": "nodenv/plugins"
     }
   },
