@@ -25,7 +25,9 @@
       "~/.aliases": "bash/aliases",
       "~/.prompt": "bash/prompt",
       "~/.git-prompt.sh": "git/git-prompt.sh",
+      "~/.git-completionbash.sh":"git/git-completionbash.sh",
       "~/.nodenv/plugins": "nodenv/plugins"
+
     }
   },
   {
