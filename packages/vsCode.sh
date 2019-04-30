@@ -11,3 +11,5 @@ code --install-extension ms-python.python
 code --install-extension eamodio.gitlens
 
 code --install-extension DavidAnson.vscode-markdownlint
+
+code --install-extension ms-ossdata.vscode-postgresql
