@@ -82,3 +82,12 @@ if [ -f ~/azure.completion.sh ]; then
 fi
 
 eval "$(nodenv init -)"
+
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/john.ptacek/src/Breakthrough/pipeline/beam/exec -l /bin/bash/google-cloud-sdk/path.bash.inc' ]; then . '/Users/john.ptacek/src/Breakthrough/pipeline/beam/exec -l /bin/bash/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/john.ptacek/src/Breakthrough/pipeline/beam/exec -l /bin/bash/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/john.ptacek/src/Breakthrough/pipeline/beam/exec -l /bin/bash/google-cloud-sdk/completion.bash.inc'; fi
