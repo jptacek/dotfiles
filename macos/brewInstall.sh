@@ -21,3 +21,5 @@ brew cask install figma
 # Azure data studio with Postgress support
 brew cask install azure-data-studio
 
+# Google cloud SDk, required Python 2.7
+brew cask install google-cloud-sdk

@@ -23,6 +23,7 @@
       "~/.bash_profile": "bash/bash_profile",
       "~/.bashrc": "bash/bashrc",
       "~/.aliases": "bash/aliases",
+      "~/.aliasesPrivate": "bash/aliasesPrivate",
       "~/.prompt": "bash/prompt",
       "~/.git-prompt.sh": "git/git-prompt.sh",
       "~/.git-completionbash.sh": "git/git-completionbash.sh",

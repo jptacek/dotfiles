@@ -2,3 +2,7 @@
 
 # never include any vim working files
 .swp
+
+.aliasesPrivate
+
+bash/aliasesPrivate
