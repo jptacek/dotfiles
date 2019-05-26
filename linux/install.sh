@@ -41,6 +41,9 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 
+
+# Insomnia
+
 # Add to sources
 echo "deb https://dl.bintray.com/getinsomnia/Insomnia /" \
     | sudo tee -a /etc/apt/sources.list.d/insomnia.list
@@ -58,28 +61,24 @@ wget https://downloads.slack-edge.com/linux_releases/slack-desktop-3.3.8-amd64.d
 
 sudo apt install ./slack-desktop-*.deb
 
-# VS Code
-sudo apt updatesudo apt install software-properties-common apt-transport-https wget
 
-wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+# Install VsCode
+if [ -f installVscode.sh ]; then
+   echo "Install Viusual Studio Code"
+   installGcloud.sh
+fi
 
-sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+# Install Gcloud SDK
+if [ -f installGcloud.sh ]; then
+   echo "Install gCloud SDK"
+   installGcloud.sh
+fi
 
-sudo apt update
-sudo apt install code
-
-# Gcloud
-# Create environment variable for correct distribution
-CLOUD_SDK_REPO="cloud-sdk-$(grep VERSION_CODENAME /etc/os-release | cut -d '=' -f 2)"
-
-# Add the Cloud SDK distribution URI as a package source
-echo "deb http://packages.cloud.google.com/apt $CLOUD_SDK_REPO main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
-
-# Import the Google Cloud Platform public key
-curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
-
-# Update the package list and install the Cloud SDK
-sudo apt-get update && sudo apt-get install google-cloud-sdk
+# Remove Libre office
+if [ -f removeLibre.sh ]; then
+   echo "Remove Libre Office"
+   removeLibre.sh
+fi
 
 # Clean up *.deb files
 rm -rf ./*.deb
