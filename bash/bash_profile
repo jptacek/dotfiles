@@ -63,6 +63,8 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:.
 export PATH=$PATH:/usr/local/go/bin
 export ML_PATH=$HOME/Src/ml
+export PATH="/home/john/.pyenv/bin:$PATH"
+
 #export NODENV_VERSION=10.15.0
 
 

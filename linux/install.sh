@@ -61,6 +61,8 @@ wget https://downloads.slack-edge.com/linux_releases/slack-desktop-3.3.8-amd64.d
 
 sudo apt install ./slack-desktop-*.deb
 
+# Pyenv
+curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
 
 # Install VsCode
 if [ -f installVscode.sh ]; then
