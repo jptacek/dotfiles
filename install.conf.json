@@ -37,6 +37,7 @@
       ["nodenv update", "updating nodenv"],
       ["nodenv package-hooks install --all", "installing nodenv package hooks"],
       ["./macos/install.sh", "installing Mac software"],
+      ["./linux/install.sh", "installing Linux softare"],
       ["./packages/npmGlobal.sh", "installing global NPM packages"],
       ["./packages/vsCode.sh", "installing vsCode files"]
     ]

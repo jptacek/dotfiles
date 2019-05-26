@@ -2,6 +2,8 @@
 
 # never include any vim working files
 .swp
+.deb
+linux/*.deb
 
 .aliasesPrivate
 
