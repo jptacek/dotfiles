@@ -18,6 +18,8 @@ brew cask install insomnia
 
 brew cask install figma
 
+brew install neofetch
+
 # Azure data studio with Postgress support
 brew cask install azure-data-studio
 

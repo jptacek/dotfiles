@@ -56,6 +56,9 @@ wget --quiet -O - https://insomnia.rest/keys/debian-public.key.asc \
 sudo apt-get update
 sudo apt-get install insomnia
 
+# Install neofetch
+sudo apt install neofetch
+
 # Slack
 wget https://downloads.slack-edge.com/linux_releases/slack-desktop-3.3.8-amd64.deb
 
@@ -75,6 +78,7 @@ if [ -f installGcloud.sh ]; then
    echo "Install gCloud SDK"
    installGcloud.sh
 fi
+
 
 # Remove Libre office
 if [ -f removeLibre.sh ]; then
