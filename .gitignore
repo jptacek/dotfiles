@@ -8,3 +8,7 @@ linux/*.deb
 .aliasesPrivate
 
 bash/aliasesPrivate
+
+nodenv/shims
+
+nodenv/versions

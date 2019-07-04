@@ -12,6 +12,7 @@
   {
     "link": {
       "~/.dotfiles": "",
+      "~/.nodenv": "nodenv",
       "~/.vim": "vim",
       "~/.vimrc": "vim/vimrc",
       "~/.gitconfig": {
@@ -26,8 +27,7 @@
       "~/.aliasesPrivate": "bash/aliasesPrivate",
       "~/.prompt": "bash/prompt",
       "~/.git-prompt.sh": "git/git-prompt.sh",
-      "~/.git-completionbash.sh": "git/git-completionbash.sh",
-      "~/.nodenv/plugins": "nodenv/plugins"
+      "~/.git-completionbash.sh": "git/git-completionbash.sh"
     }
   },
   {

@@ -1,16 +1,16 @@
-## .bashrc is run each time a terminal is created. Things like path, colors
+i## .bashrc is run each time a terminal is created. Things like path, colors
 ##     etc should be here. If a user logs on remotely, it also gets run
 ## .bash_profile is executed for each interactive login. You can put things
 ##     here you don't want to see at each prompt. For example, diagnostics
 
 function my_ip_wired() # Get IP adress on ethernet.
 {
-    MY_IPW=$(/sbin/ifconfig enx0050b667e645 | awk '/inet / { print "Wired " $2 } ' )
+    MY_IPW=$(/sbin/ifconfig en0 | awk '/inet / { print "Wired " $2 } ' )
     echo ${MY_IPW:-"Not connected"}
 }
 function my_ip_wireless() # Get IP adress on ethernet.
 {
-    MY_IPWL=$(/sbin/ifconfig wlo1 | awk '/inet / { print "Wireless: " $2 } ' )
+    MY_IPWL=$(/sbin/ifconfig en1 | awk '/inet / { print "Wireless: " $2 } ' )
     echo ${MY_IPWL:-"Not connected"}
 }
 
@@ -54,42 +54,31 @@ function mydf()         # Pretty-print of 'df' output.
     echo
 }
 ## Environment variables
-export JAVA_HOME=/usr/lib/jvm/java-8-oracle/jre
-export ANDROID_HOME=$HOME//Android/Sdk
+#export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre/
+export JAVA_HOME=/Applications/Android\ Studio.app/Contents/jre/jdk/Contents/Home
+
+export ANDROID_HOME=$HOME/Library/Android/sdk
 export GOBIN=$HOME/work/bin
 
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:.
 export PATH=$PATH:/usr/local/go/bin
-export ML_PATH=$HOME/Src/ml
-export PATH=$HOME/.pyenv/bin:$PATH
-
-export NODENV_VERSION=11.6.0
-
-
-# Unset manpath so we can inherit from /etc/manpath via the `manpath` command
-unset MANPATH # delete if you already modified MANPATH elsewhere in your config
-export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
-export GOPATH="/usr/local/go"
+export PATH=$PATH:~/Library/Python/3.6/bin
 
 ## Execute bash Profile
 if [ -f ~/.bashrc ]; then
     . ~/.bashrc
 fi
 
-## Execute Azure command line data
-if [ -f ~/azure.completion.sh ]; then
-    source ~/azure.completion.sh
-fi
 
-eval "$(nodenv init -)"
+export PATH=$PATH:$HOME/bin
 
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+
+export PATH="~/anaconda/bin:$PATH"
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/john.ptacek/src/Breakthrough/pipeline/beam/exec -l /bin/bash/google-cloud-sdk/path.bash.inc' ]; then . '/Users/john.ptacek/src/Breakthrough/pipeline/beam/exec -l /bin/bash/google-cloud-sdk/path.bash.inc'; fi
+if [ -f '/Users/john/google-cloud-sdk/path.bash.inc' ]; then . '/Users/john/google-cloud-sdk/path.bash.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/john.ptacek/src/Breakthrough/pipeline/beam/exec -l /bin/bash/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/john.ptacek/src/Breakthrough/pipeline/beam/exec -l /bin/bash/google-cloud-sdk/completion.bash.inc'; fi
+if [ -f '/Users/john/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/john/google-cloud-sdk/completion.bash.inc'; fi
