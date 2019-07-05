@@ -20,6 +20,8 @@ brew cask install figma
 
 brew install neofetch
 
+brew install tmux
+
 # Azure data studio with Postgress support
 brew cask install azure-data-studio
 

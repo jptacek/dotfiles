@@ -13,12 +13,12 @@ fi
 echo "› sudo softwareupdate -i -a"
 sudo softwareupdate -i -a
 
-if [ -f set-defaults.sh ]; then
+if [ -f ./set-defaults.sh ]; then
    echo "Setting defaults for MacOS"
-   set-defaults.sh
+   ./set-defaults.sh
 fi
 
-if [ -f brewinstall.sh ]; then
+if [ -f ./macos/brewinstall.sh ]; then
    echo "Installing Brew cask files"
-   brewinstall.sh
+   ./macos/brewinstall.sh
 fi
