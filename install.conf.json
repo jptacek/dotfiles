@@ -21,8 +21,7 @@
       },
 
       "~/.gitignore": "git/gitignore",
-      "~/.bash_profile": "bash/bash_profile",
-      "~/.bashrc": "bash/bashrc",
+      "~/.zshrc": "zsh/zshrc",
       "~/.aliases": "bash/aliases",
       "~/.aliasesPrivate": "bash/aliasesPrivate",
       "~/.prompt": "bash/prompt",

@@ -1,2 +1,0 @@
-
-alias home='ssh -p 9090 john@72.135.112.70'

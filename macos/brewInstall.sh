@@ -34,6 +34,9 @@ brew install neofetch
 echo "Installing Tmux"
 brew install tmux
 
+echo "Install zsh Bash completion"
+brew install bash-completion
+
 # Azure data studio with Postgress support
 echo "Installing Azure Data Studio"
 brew cask install azure-data-studio
