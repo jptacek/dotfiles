@@ -41,6 +41,10 @@ brew install bash-completion
 echo "Installing Azure Data Studio"
 brew cask install azure-data-studio
 
+
+echo "Installing Fortune"
+brew install fortune
+
 # Google cloud SDk, required Python 2.7
 echo "Installing Google SDK"
 brew cask install google-cloud-sdk

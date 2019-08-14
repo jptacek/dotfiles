@@ -137,6 +137,11 @@ echo
 if [ -x /usr/games/fortune ]; then
     /usr/games/fortune -s     # Makes our day a bit more fun.... :-)
 fi
+
+# Mac check
+if [ -x /usr/local/bin/fortune ]; then
+  /usr/local/bin/fortune
+fi
 echo
 
 ## Environment variables
