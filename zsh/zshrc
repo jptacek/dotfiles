@@ -85,7 +85,7 @@ source $ZSH/oh-my-zsh.sh
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
 # else
-#   export EDITOR='mvim'
+#   export EDITOR='vim'
 # fi
 
 # Compilation flags
@@ -157,6 +157,9 @@ export PATH=$HOME/.pyenv/bin:$PATH
 unset MANPATH # delete if you already modified MANPATH elsewhere in your config
 export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 export GOPATH="/usr/local/go"
+
+alias vi=/usr/local/bin/vim
+alias vim=/usr/local/bin/vim
 
 
 ## Execute Azure command line data

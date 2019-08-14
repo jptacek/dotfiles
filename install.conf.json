@@ -22,9 +22,8 @@
 
       "~/.gitignore": "git/gitignore",
       "~/.zshrc": "zsh/zshrc",
-      "~/.aliases": "bash/aliases",
-      "~/.aliasesPrivate": "bash/aliasesPrivate",
-      "~/.prompt": "bash/prompt"
+      "~/.aliases": "alias/aliases",
+      "~/.aliasesPrivate": "alias/aliasesPrivate"
     }
   },
   {
