@@ -4,7 +4,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/john.ptacek/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -139,12 +139,11 @@ if [ -x /usr/games/fortune ]; then
 fi
 echo
 
-eval "$(nodenv init -)"
 ## Environment variables
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle/jre
 export ANDROID_HOME=$HOME//Android/Sdk
 export GOBIN=$HOME/work/bin
-
+export PATH=$HOME/.nodenv/bin:$PATH
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:.
@@ -152,7 +151,6 @@ export PATH=$PATH:/usr/local/go/bin
 export ML_PATH=$HOME/Src/ml
 export PATH=$HOME/.pyenv/bin:$PATH
 
-#export NODENV_VERSION=11.6.0
 
 
 # Unset manpath so we can inherit from /etc/manpath via the `manpath` command
