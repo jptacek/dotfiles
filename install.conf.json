@@ -21,18 +21,17 @@
       },
 
       "~/.gitignore": "git/gitignore",
-      "~/.bash_profile": "bash/bash_profile",
-      "~/.bashrc": "bash/bashrc",
+      "~/.zshrc": "zsh/zshrc",
       "~/.aliases": "bash/aliases",
       "~/.aliasesPrivate": "bash/aliasesPrivate",
-      "~/.prompt": "bash/prompt",
-      "~/.git-prompt.sh": "git/git-prompt.sh",
-      "~/.git-completionbash.sh": "git/git-completionbash.sh"
+      "~/.prompt": "bash/prompt"
     }
   },
   {
     "shell": [
       ["git submodule update --init --recursive", "updating submodules"],
+      ["git clone https://github.com/nodenv/nodenv.git ~/dotfiles/nodenv","updating submodules"],
+
       ["./fonts/powerline/install.sh", "installing Powerline Fonts"],
       ["nodenv update", "updating nodenv"],
       ["nodenv package-hooks install --all", "installing nodenv package hooks"],

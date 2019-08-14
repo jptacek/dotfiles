@@ -42,7 +42,7 @@ function mydf()         # Pretty-print of 'df' output.
 {
     echo -e "\nYou are logged on ${BRed}$HOST"
     echo -e "\n${BRed}Additional information:$NC " ; uname -a
-    echo -e "\n${BRed}Users logged on:$NC " ; w -hs |
+    echo -e "\n${BRed}Users logged on:$NC " ; w -h |
              cut -d " " -f1 | sort | uniq
     echo -e "\n${BRed}Machine stats :$NC " ; uptime
     echo -e "\n${BRed}Memory stats :$NC " ; free
@@ -65,7 +65,7 @@ export PATH=$PATH:/usr/local/go/bin
 export ML_PATH=$HOME/Src/ml
 export PATH=$HOME/.pyenv/bin:$PATH
 
-export NODENV_VERSION=11.6.0
+#export NODENV_VERSION=11.6.0
 
 
 # Unset manpath so we can inherit from /etc/manpath via the `manpath` command

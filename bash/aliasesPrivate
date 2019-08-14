@@ -1,2 +1,1 @@
-
-alias home='ssh -p 9090 john@72.135.112.70'
+alias remote='john@72.135.112.70 -p 9090/'
