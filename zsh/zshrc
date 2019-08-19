@@ -10,7 +10,12 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+#ZSH_THEME="robbyrussell"
+ZSH_THEME="pygmalion"
+
+#
+# A nice sample file
+#    https://matt.blissett.me.uk/linux/zsh/zshrc
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -85,8 +90,26 @@ source $ZSH/oh-my-zsh.sh
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
 # else
-#   export EDITOR='vim'
+#   export EDITOR='mvim'
 # fi
+
+# Set default editor
+# if [[ -x $(which vim 2> /dev/null) ]]; then
+#     export EDITOR="vim"
+#     export USE_EDITOR=$EDITOR
+#     export VISUAL=$EDITOR
+# fi
+
+# Zsh settings for history
+HISTORY_IGNORE="(ls|[bf]g|exit|reset|clear|cd|cd ..|cd..)"
+HISTSIZE=25000
+HISTFILE=~/.zsh_history
+SAVEHIST=100000
+setopt INC_APPEND_HISTORY
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_REDUCE_BLANKS
+setopt HIST_VERIFY
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -163,20 +186,56 @@ unset MANPATH # delete if you already modified MANPATH elsewhere in your config
 export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 export GOPATH="/usr/local/go"
 
-alias vi=/usr/local/bin/vim
-alias vim=/usr/local/bin/vim
-
 
 ## Execute Azure command line data
 if [ -f ~/azure.completion.sh ]; then
     source ~/azure.completion.sh
 fi
 
+# Setup node init
 eval "$(nodenv init -)"
 
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
+
+#------------------------------
+# Prompt
+#------------------------------
+autoload -U colors zsh/terminfo
+colors
+
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' enable git hg
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:git*' formats "%{${fg[cyan]}%}[%{${fg[green]}%}%s%{${fg[cyan]}%}][%{${fg[blue]}%}%r/%S%%{${fg[cyan]}%}][%{${fg[blue]}%}%b%{${fg[yellow]}%}%m%u%c%{${fg[cyan]}%}]%{$reset_color%}"
+
+setprompt() {
+  setopt prompt_subst
+
+  if [[ -n "$SSH_CLIENT"  ||  -n "$SSH2_CLIENT" ]]; then
+    p_host='%F{yellow}%M%f'
+  else
+    p_host='%F{green}%M%f'
+  fi
+
+  PS1=${(j::Q)${(Z:Cn:):-$'
+    %F{cyan}[%f
+    %(!.%F{red}%n%f.%F{green}%n%f)
+    %F{cyan}@%f
+    ${p_host}
+    %F{cyan}][%f
+    %F{blue}%~%f
+    %F{cyan}]%f
+    %(!.%F{red}%#%f.%F{green}%#%f)
+    " "
+  '}}
+
+  PS2=$'%_>'
+  RPROMPT=$'${vcs_info_msg_0_}'
+}
+#setprompt
+RPROMPT="[%D{%m/%f/%y}|%D{%L:%M:%S}]"
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/john.ptacek/src/Breakthrough/pipeline/beam/exec -l /bin/bash/google-cloud-sdk/path.bash.inc' ]; then . '/Users/john.ptacek/src/Breakthrough/pipeline/beam/exec -l /bin/bash/google-cloud-sdk/path.bash.inc'; fi
 

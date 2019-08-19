@@ -1,5 +1,11 @@
 # My dotfiles setup and great links
 
+# Setup ZSH
+
+We user zsh as the default shell and oh-my-zsh. To install oh-my
+
+`sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
+
 ## MOAR Reading
 
 This repo has a folder for each respective area of dotfiles. In each you will find a readme
