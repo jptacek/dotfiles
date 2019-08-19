@@ -1,1 +1,1 @@
-alias remote='john@72.135.112.70 -p 9090'
+alias remote='ssh john@92.135.112.90 -p 1234'
