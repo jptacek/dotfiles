@@ -1,6 +1,9 @@
 echo "Installing Firefox"
 brew cask install firefox
 
+echo "Installing Chrome"
+brew cask install google-chrome
+
 echo "Installing iTerm2"
 brew cask install iterm2
 

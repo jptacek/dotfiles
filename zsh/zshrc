@@ -11,8 +11,8 @@ export ZSH="$HOME/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 #ZSH_THEME="robbyrussell"
-ZSH_THEME="pygmalion"
-
+#ZSH_THEME="pygmalion"
+ZSH_THEME="agnoster"
 #
 # A nice sample file
 #    https://matt.blissett.me.uk/linux/zsh/zshrc
@@ -241,3 +241,10 @@ if [ -f '/Users/john.ptacek/src/Breakthrough/pipeline/beam/exec -l /bin/bash/goo
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/john.ptacek/src/Breakthrough/pipeline/beam/exec -l /bin/bash/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/john.ptacek/src/Breakthrough/pipeline/beam/exec -l /bin/bash/google-cloud-sdk/completion.bash.inc'; fi
+
+# Powerline
+powerline-daemon -q
+POWERLINE_BASH_CONTINUATION=1
+POWERLINE_BASH_SELECT=1
+. /usr/local/lib/python3.7/site-packages/powerline/bindings/zsh/powerline.zsh
+

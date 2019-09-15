@@ -6,6 +6,9 @@ We user zsh as the default shell and oh-my-zsh. To install oh-my
 
 `sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
 
+## MacOS
+Install [Brew](https://brew.sh) `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+
 ## MOAR Reading
 
 This repo has a folder for each respective area of dotfiles. In each you will find a readme
