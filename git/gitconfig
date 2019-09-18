@@ -19,3 +19,5 @@
   path = "/applications/p4merge.app/Contents/MacOS/p4merge"
   keepbackup = false
   trustExitCode = false
+[pager]
+  branch = false  
