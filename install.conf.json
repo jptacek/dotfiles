@@ -23,15 +23,19 @@
       "~/.gitignore": "git/gitignore",
       "~/.zshrc": "zsh/zshrc",
       "~/.aliases": "alias/aliases",
-      "~/.aliasesPrivate": "alias/aliasesPrivate"
+      "~/.aliasesPrivate": "alias/aliasesPrivate",
+      "~/.tmux.conf": "tmux/tmux.conf"
     }
   },
   {
     "shell": [
       ["git submodule update --init --recursive", "updating submodules"],
-      ["git clone https://github.com/nodenv/nodenv.git ~/dotfiles/nodenv","updating submodules"],
+      [
+        "git clone https://github.com/nodenv/nodenv.git ~/dotfiles/nodenv",
+        "updating submodules"
+      ],
 
-      ["./fonts/powerline/install.sh", "installing Powerline Fonts"],
+      ["./fonts/powerline/install.sh", "Installing Powerline Fonts"],
       ["nodenv update", "updating nodenv"],
       ["nodenv package-hooks install --all", "installing nodenv package hooks"],
       ["./macos/install.sh", "installing Mac software"],

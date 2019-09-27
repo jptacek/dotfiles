@@ -1,7 +1,10 @@
-execute pathogen#infect()
+" load vim-plug
+source ~/.vim/.plug.vim
 
 filetype on
 syntax on
+set term=xterm-256color
+set termencoding=utf-8
 colorscheme Tomorrow-Night
 
 set tabstop=2
@@ -12,7 +15,6 @@ set guifont=Menlo:h18
 set colorcolumn=90
 set showcmd
 set cursorline
-set laststatus=2
 set number
 set relativenumber
 set showmatch
@@ -20,20 +22,10 @@ set autoread
 
 map <C-n> :NERDTreeToggle<CR>
 
-" powerline
-" set rtp+=/usr/local/lib/python3.7/site-packages/powerline/bindings/vim
-" set laststatus=2
-" set t_Co=256
-" set guifont=Inconsolata\ for\ Powerline:h15
-" let g:Powerline_symbols = 'fancy'
-" set encoding=utf-8
-" set t_Co=256
-" set fillchars+=stl:\ ,stlnc:\
-" set term=xterm-256color
-" set termencoding=utf-8s
-
-set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim
-
+set laststatus=2  "Always display status line
+set t_Co=256
+" Powerline
+source ~/.local/lib/python3.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
 if has("gui_running")
    let s:uname = system("uname")
    if s:uname == "Darwin\n"
