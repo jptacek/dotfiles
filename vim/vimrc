@@ -1,34 +1,60 @@
 " load vim-plug
 source ~/.vim/.plug.vim
 
-filetype on
-syntax on
+filetype on 
+
+" Colors
+syntax enable                 " enable syntax processing
 set term=xterm-256color
 set termencoding=utf-8
-colorscheme Tomorrow-Night
+ colorscheme Tomorrow-Night
+" colorscheme badwolf
+" colorscheme elflord 
 
-set tabstop=2
+" Spaces and tabs
+set tabstop=4                 " number of visual spaces per TAB 
+set softtabstop=4             " number of spaces in tab when editing
+set expandtab                 " tabs are spaces
 set shiftwidth=2 
-set expandtab
+
+
 set autoindent
 set guifont=Menlo:h18
 set colorcolumn=90
-set showcmd
-set cursorline
-set number
-set relativenumber
-set showmatch
-set autoread
+
+"  UI Config
+set showcmd                   " Show last command in bottom right
+set cursorline                " highlight current line
+set number                    " Show line numbers
+set wildmenu                  " visual autocomplete for command menu
+"set relativenumber            " Number of lines relative to cursor
+set showmatch                 " highlight matching [{()}]
+
+" Searching
+set incsearch                 " search as characters are entered
+set hlsearch                  " highlight matches
+" turn off search highlight by typing ,<space>
+nnoremap <leader><space> :nohlsearch<CR>
+
+" Backup
+set backup                    " tell vim to keep a backup file
+set backupdir=~/.vimbackup    " tell vim where to put its backup files
 
 map <C-n> :NERDTreeToggle<CR>
-
+    
 set laststatus=2  "Always display status line
 set t_Co=256
 " Powerline
-source ~/.local/lib/python3.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
+source /usr/local/lib/python3.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
 if has("gui_running")
    let s:uname = system("uname")
    if s:uname == "Darwin\n"
       set guifont=Meslo\ LG\ S\ for\ Powerline
    endif
 endif
+
+" Vim Color schemes
+" https://alvinalexander.com/linux-unix/vimrc-vim-example-commands-configuration-file
+
+" Never put anything you don't know into .vimrc
+" https://dougblack.io/words/a-good-vimrc.html
