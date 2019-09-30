@@ -57,12 +57,12 @@ sudo apt-get update
 sudo apt-get install insomnia
 
 # Install neofetch
-sudo apt install neofetch
+sudo apt-get install neofetch
 
 # Slack
 wget https://downloads.slack-edge.com/linux_releases/slack-desktop-3.3.8-amd64.deb
 
-sudo apt install ./slack-desktop-*.deb
+sudo apt-get install ./slack-desktop-*.deb
 
 # Pyenv
 curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
