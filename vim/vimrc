@@ -27,14 +27,28 @@ set showcmd                   " Show last command in bottom right
 set cursorline                " highlight current line
 set number                    " Show line numbers
 set wildmenu                  " visual autocomplete for command menu
-"set relativenumber            " Number of lines relative to cursor
+set relativenumber            " Number of lines relative to cursor
 set showmatch                 " highlight matching [{()}]
+set ruler                     " Always show cursor position
 
 " Searching
 set incsearch                 " search as characters are entered
 set hlsearch                  " highlight matches
+
+" Key Remappings
 " turn off search highlight by typing ,<space>
-nnoremap <leader><space> :nohlsearch<CR>
+" nnoremap <leader><space> :nohlsearch<CR>
+" Remaps arrow keys to be non operations. train the fingers
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+" esc in insert mode
+inoremap jj <esc>
 
 " Backup
 set backup                    " tell vim to keep a backup file
@@ -44,8 +58,13 @@ map <C-n> :NERDTreeToggle<CR>
     
 set laststatus=2  "Always display status line
 set t_Co=256
-" Powerline
-source /usr/local/lib/python3.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
+" Powerline loading based on different installs for python
+:if !empty(glob("$HOME/.local/lib/python3.7/site-packages/powerline/bindings/vim/plugin/powerline.vim"))
+:   source $HOME/.local/lib/python3.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
+:endif
+:if !empty(glob("/usr/local/lib/python3.7/site-packages/powerline/bindings/vim/plugin/powerline.vim"))
+:   source /usr/local/lib/python3.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
+:endif
 if has("gui_running")
    let s:uname = system("uname")
    if s:uname == "Darwin\n"

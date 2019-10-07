@@ -23,7 +23,19 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 
 " syntax highlighting
-Plug 'tomvanderlee/vim-kerboscript', { 'for': 'kerboscript' }
+Plug 'yump/vim-kerboscript', { 'for': 'kerboscript' }
+
+" On-demand loading
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+
+" Code complete for VIm
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" Pretty developer icons
+Plug 'ryanoasis/vim-devicons'
+
+" Flake8 support
+Plug 'nvie/vim-flake8'
 
 " Powerline
 "	new file:   vim/bundle/powerline
@@ -33,4 +45,4 @@ Plug 'tomvanderlee/vim-kerboscript', { 'for': 'kerboscript' }
 
 
 
-call plug#begin()
+call plug#end()
