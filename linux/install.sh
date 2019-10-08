@@ -59,6 +59,9 @@ sudo apt-get install insomnia
 # Install neofetch
 sudo apt-get install neofetch
 
+# Install RipGrep
+sudo apt-get install ripgrep
+
 # Slack
 wget https://downloads.slack-edge.com/linux_releases/slack-desktop-3.3.8-amd64.deb
 

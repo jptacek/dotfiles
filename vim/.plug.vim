@@ -39,7 +39,9 @@ Plug 'nvie/vim-flake8'
 
 " FZF (fuzzy file finder) install https://github.com/junegunn/fzf
 " must be installed
-Plug '~/.fzf'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
 " Powerline
 "	new file:   vim/bundle/powerline
 "	new file:   vim/bundle/vim-airline

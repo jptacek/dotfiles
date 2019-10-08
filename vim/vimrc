@@ -7,9 +7,10 @@ filetype on
 syntax enable                 " enable syntax processing
 set term=xterm-256color
 set termencoding=utf-8
- colorscheme Tomorrow-Night
+" colorscheme Tomorrow-Night
 " colorscheme badwolf
 " colorscheme elflord 
+colorscheme zenburn
 
 " Spaces and tabs
 set tabstop=4                 " number of visual spaces per TAB 
@@ -58,6 +59,7 @@ map <C-n> :NERDTreeToggle<CR>
     
 set laststatus=2  "Always display status line
 set t_Co=256
+
 " Powerline loading based on different installs for python
 :if !empty(glob("$HOME/.local/lib/python3.7/site-packages/powerline/bindings/vim/plugin/powerline.vim"))
 :   source $HOME/.local/lib/python3.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
@@ -65,12 +67,27 @@ set t_Co=256
 :if !empty(glob("/usr/local/lib/python3.7/site-packages/powerline/bindings/vim/plugin/powerline.vim"))
 :   source /usr/local/lib/python3.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
 :endif
+
+
 if has("gui_running")
    let s:uname = system("uname")
    if s:uname == "Darwin\n"
       set guifont=Meslo\ LG\ S\ for\ Powerline
    endif
 endif
+
+" File searching
+" --column: Show column number
+" --line-number: Show line number
+" --no-heading: Do not show file headings in results
+" --fixed-strings: Search term as a literal string
+" --ignore-case: Case insensitive search
+" --no-ignore: Do not respect .gitignore, etc...
+" --hidden: Search hidden files and folders
+" --follow: Follow symlinks
+" --glob: Additional conditions for search (in this case ignore everything in the .git/ folder)
+" --color: Search color options
+" command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>), 1, <bang>0)
 
 " Vim Color schemes
 " https://alvinalexander.com/linux-unix/vimrc-vim-example-commands-configuration-file
