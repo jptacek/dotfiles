@@ -37,6 +37,9 @@ Plug 'ryanoasis/vim-devicons'
 " Flake8 support
 Plug 'nvie/vim-flake8'
 
+" FZF (fuzzy file finder) install https://github.com/junegunn/fzf
+" must be installed
+Plug '~/.fzf'
 " Powerline
 "	new file:   vim/bundle/powerline
 "	new file:   vim/bundle/vim-airline
