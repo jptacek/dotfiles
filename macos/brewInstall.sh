@@ -51,3 +51,11 @@ brew install fortune
 # Google cloud SDk, required Python 2.7
 echo "Installing Google SDK"
 brew cask install google-cloud-sdk
+
+# htop
+echo "Installing htop"
+brew install htop
+
+# ripgrep
+echo "Installing ripgrep"
+brew install ripgrep

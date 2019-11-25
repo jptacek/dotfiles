@@ -69,3 +69,5 @@ fi
 echo
 
 eval "$(nodenv init -)"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

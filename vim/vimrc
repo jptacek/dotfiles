@@ -36,6 +36,10 @@ set ruler                     " Always show cursor position
 set incsearch                 " search as characters are entered
 set hlsearch                  " highlight matches
 
+"set filetype=json
+"syntax on
+"set foldmethod=syntax
+
 " Key Remappings
 " turn off search highlight by typing ,<space>
 " nnoremap <leader><space> :nohlsearch<CR>
