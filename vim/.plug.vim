@@ -48,6 +48,10 @@ Plug 'junegunn/fzf.vim'
 "	new file:   vim/bundle/vim-airline-themes
 "	new file:   vim/bundle/vim-sensible
 
+" Dracula Theme
+Plug 'dracula/vim', { 'as': 'dracula' }
 
+" planelight theme
+Plug 'drewtempelmeyer/palenight.vim'
 
 call plug#end()

@@ -10,7 +10,10 @@ set termencoding=utf-8
 " colorscheme Tomorrow-Night
 " colorscheme badwolf
 " colorscheme elflord 
-colorscheme zenburn
+" colorscheme zenburn
+" colorscheme dracula
+set background=dark
+colorscheme palenight
 
 " Spaces and tabs
 set tabstop=4                 " number of visual spaces per TAB 

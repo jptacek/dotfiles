@@ -34,6 +34,13 @@
 [Tomorrow by Chris Kempson](https://github.com/chriskempson/tomorrow-theme)
 
 ## Plugin Loader
+Using [vim-plug](https://github.com/junegunn/vim-plug) as the plug in loader.
+
+PlugIns are managed via hte `.plug.vim` file and loaded in the `.vimrc` file.
+
+To install plugins, run the `:PlugInstall` command in Vim
+
+** Previously Used ** 
 
 [Pathogen](https://github.com/tpope/vim-pathogen)
 
@@ -42,7 +49,7 @@
   curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 ```
 
-## Vim Bundles
+## Vim Bundles (Deprecated, but bundles loaded via Pathogen)
 
 My bundles are added as git submodules and loaded by Pathogen.
 
@@ -64,3 +71,5 @@ My bundles are added as git submodules and loaded by Pathogen.
   - `git submodule add https://github.com/tpope/vim-surround.git vim/bundle/vim-surround`
 - [LightLine]()
   - `git submodule add https://github.com/itchyny/lightline.vim.git vim/bundle/lightline`
+- [Dracula](https://draculatheme.com/vim/)
+  - `git submodule add git@github.com:dracula/vim.git bundle/dracula`
